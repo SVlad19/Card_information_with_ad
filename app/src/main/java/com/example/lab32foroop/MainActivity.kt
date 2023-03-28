@@ -20,14 +20,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnLogin.setOnClickListener(){
             if(binding.etUsername.text.toString() == FirstPerson.username && binding.etPassword.text.toString() == FirstPerson.password ){
-
                 startActivity(intent.apply { putExtra("person",FirstPerson) })
             }else{
                 binding.etUsername.setText("")
                 binding.etPassword.setText("")
             }
         }
+
     }
+
+
     override fun onResume() {
         super.onResume()
         binding.etUsername.setText("")

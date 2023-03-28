@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Lab32ForOOP"
         tools:targetApi="31">
         <activity
+            android:name=".AdActivity"
+            android:exported="false" />
+        <activity
             android:name=".InfoWindow"
             android:exported="false" />
         <activity
