@@ -4,6 +4,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".InfoWindow">
+
+    <ImageView
+        android:id="@+id/ivCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="275dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack"
+        app:layout_constraintVertical_bias="0.995"
+        app:srcCompat="@drawable/card" />
+
+    <TextView
+        android:id="@+id/tvNameCard"
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Картка для виплат"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCard"
+        app:layout_constraintStart_toStartOf="@+id/ivCard"
+        app:layout_constraintTop_toTopOf="@+id/ivCard"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <TextView
+        android:id="@+id/tvNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="5168 *** *** 2311"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCard"
+        app:layout_constraintStart_toStartOf="@+id/ivCard"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameCard"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="23/28"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCard"
+        app:layout_constraintStart_toStartOf="@+id/ivCard"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumbers"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <TextView
+        android:id="@+id/tvMoney"
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="169dp"
+        android:text="1500 UAH"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCard"
+        app:layout_constraintEnd_toStartOf="@+id/ivMasterCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvYear"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <ImageView
+        android:id="@+id/ivMasterCard"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvMoney"
+        app:srcCompat="@drawable/mastercard" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="88dp"
+        android:layout_height="41dp"
+
+        android:backgroundTint="@color/purple_500"
+        android:drawableRight="@drawable/baseline_arrow_circle_left_24"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
